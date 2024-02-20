@@ -44,10 +44,10 @@ color #59C "[@]"
 # Preprocessor directives:
 color #48C "#(define|elif|else|endif|endregion|error|if|line|nullable|pragma|region|undef|warning)"
 
-# Operators:
+# Operators (general):
 color #789 "[-,;:!?.*%+=]"
 
-# Bitwise and shift operators:
+# Operators (bitwise and shift):
 color #789 "[&^|~<\>]"
 
 # Lambdas (define after operators):
