@@ -1,0 +1,96 @@
+# Nano syntax highlighting for C#.
+
+syntax "C#" "\.cs$"
+comment "//"s
+
+# Optional syntax highlighting for methods (define before keywords and delimiters):
+color #4BA "\w+[\(]"
+
+# Optional syntax highlighting for attributes (define before delimiters):
+color #4BA "\[(.*?)\]"
+
+# Keywords (general):
+color #59C "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|interface|internal|is)\>"
+color #59C "\<(namespace|new|operator|out|override|params|private|protected|public|readonly|ref)\>"
+color #59C "\<(sealed|sizeof|stackalloc|static|struct|throw|typeof|using|virtual|void|volatile)\>"
+
+# Keywords (control):
+color #C8B "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|throw|try|while)\>"
+
+# Keywords (primitive):
+color #59C "\<(bool|byte|char|decimal|double|float|int|long|sbyte|short|uint|ulong|ushort)\>"
+
+# Keywords (alias):
+color #59C "\<(object|string)\>"
+
+# Keywords (class access):
+color #59C "\<(base|this)\>"
+
+# Keywords (literals):
+color #59C "\<(true|false|null)\>"
+
+# Keywords (runtime):
+color #C8B "\<(checked|fixed|lock|unchecked|unsafe)\>"
+
+# Contextual keywords:
+color #59C "\<(add|alias|and|args|ascending|async|await|by|descending|dynamic|equals|file|from|get|global|group)\>"
+color #59C "\<(init|into|join|let|managed|nameof|nint|not|notnull|nuint|on|or|orderby|partial|record|remove|required)\>"
+color #59C "\<(scoped|select|set|unmanaged|value|var|when|where|with|yield)\>"
+
+# Keyword as variable indicator (define after keywords and before string indicators):
+color normal "[@][a-z]+"
+color #59C "[@]"
+
+# Preprocessor directives:
+color #48C "#(define|elif|else|endif|endregion|error|if|line|nullable|pragma|region|undef|warning)"
+
+# Operators:
+color #789 "[-,;:!?.*%+=]"
+
+# Bitwise and shift operators:
+color #789 "[&^|~<\>]"
+
+# Lambdas (define after operators):
+color #789 "=>"
+
+# Delimiters ((), [], and {}):
+color #FD0 "[\(\)]+|[][]+|[\{\}]"
+
+# Numerics:
+color #ACA "\b[0-9]+"
+color #ACA "[0-9]*\.[0-9]+(e[0-9]+)*"
+color #ACA "\b0b[01]+"
+color #ACA "\b0x[0-9a-fA-F]+"
+
+# Characters and escapes.
+color #B87 "'.?'"
+color #B87 "'\\['\"\\0abfnrtv]'"
+
+# Verbatim and interpolated string indicators:
+color #B87 "[@$]\""
+
+# Unicode:
+color #B87 "'\\[ux][0-9a-fA-F]{4}'"
+
+# Comments (ignore comments inside quotes):
+color #684 "//[^"'`]+$"
+color #684 start="/\*" end="\*/"
+
+# Documentation comments:
+color #684 "///.*"
+
+# Documentation attributes:
+color #59C "\<(cref|name)="
+
+# String literal (define after comments to use within documentation):
+color #B87 start=""" end="""
+
+# Raw string literal:
+color #B87 start=""""" end="""""
+
+# Reminders (define after comments):
+color brightred "\<(FIXME)\>"
+color brightblue "\<(TODO)\>"
+
+# Trailing whitespace (define last):
+color ,blue "[[:space:]]+$"
