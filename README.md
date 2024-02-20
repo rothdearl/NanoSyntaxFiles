@@ -29,7 +29,7 @@ The following colors are available:
 **Standard:**
 `black, blue, cyan, green, magenta, red, white, yellow`
 
-Each color can be prefixed with `light` and `bright`.
+The standard colors can be prefixed with `light` and `bright`.
 
 `light` = A lighter version of the color.
 
@@ -72,3 +72,7 @@ include ${PATH_TO_CUSTOM_FILE}/csharp-dark.nanorc
 set autoindent
 ...
 ```
+
+### Screenshots
+
+![csharp-dark-3.png](./screenshots/csharp-dark-3.png)
