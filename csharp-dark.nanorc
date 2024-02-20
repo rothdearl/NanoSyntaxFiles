@@ -17,10 +17,10 @@ color #59C "\<(sealed|sizeof|stackalloc|static|struct|throw|typeof|using|virtual
 # Keywords (control):
 color #C8B "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|throw|try|while)\>"
 
-# Keywords (primitive):
+# Keywords (primitives):
 color #59C "\<(bool|byte|char|decimal|double|float|int|long|sbyte|short|uint|ulong|ushort)\>"
 
-# Keywords (alias):
+# Keywords (aliases):
 color #59C "\<(object|string)\>"
 
 # Keywords (class access):
@@ -66,26 +66,26 @@ color #ACA "\b0x[0-9a-fA-F]+"
 color #B87 "'.?'"
 color #B87 "'\\['\"\\0abfnrtv]'"
 
-# Verbatim and interpolated string indicators:
-color #B87 "[@$]\""
-
 # Unicode:
 color #B87 "'\\[ux][0-9a-fA-F]{4}'"
+
+# Verbatim and interpolated string indicators:
+color #B87 "[@$]\""
 
 # Comments (ignore comments inside quotes):
 color #684 "//[^"'`]+$"
 color #684 start="/\*" end="\*/"
 
-# Documentation comments:
+# Comments (documentation):
 color #684 "///.*"
 
-# Documentation attributes:
+# Comments (documentation attributes):
 color #59C "\<(cref|name)="
 
 # String literal (define after comments to use within documentation):
 color #B87 start=""" end="""
 
-# Raw string literal:
+# String literal (raw):
 color #B87 start=""""" end="""""
 
 # Reminders (define after comments):
