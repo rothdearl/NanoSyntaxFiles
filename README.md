@@ -1,10 +1,10 @@
-# Syntax files for the nano text editor.
+# Syntax Files for the nano Text Editor
 
-## Getting Started
+## Summary
 
 This repository contains syntax configuration files for the nano text editor. They can be downloaded as files or the
 contents can be copy/pasted into an existing configuration file. The following document provides information on how a
-syntax file is created.
+syntax file is set up.
 
 ### Regex Evaluation
 
