@@ -1,7 +1,6 @@
 # Nano syntax highlighting for C#.
 
 syntax "C#" "\.cs$"
-comment "//"s
 
 # Optional syntax highlighting for methods (define before keywords and delimiters):
 color #4BA "\w+[\(]"
