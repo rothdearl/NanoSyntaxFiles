@@ -3,100 +3,100 @@
 syntax "C#" "\.cs$"
 
 # Keywords (general):
-color #59C "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|interface|internal|is)\>"
-color #59C "\<(namespace|new|operator|out|override|params|private|protected|public|readonly|ref)\>"
-color #59C "\<(sealed|sizeof|stackalloc|static|struct|throw|typeof|using|virtual|void|volatile)\>"
+color #17D "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|interface|internal|is)\>"
+color #17D "\<(namespace|new|operator|out|override|params|private|protected|public|readonly|ref)\>"
+color #17D "\<(sealed|sizeof|stackalloc|static|struct|throw|typeof|using|virtual|void|volatile)\>"
 
 # Keywords (control):
-color #C8B "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|try|while)\>"
+#color #C8B "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|try|while)\>"
 
 # Keywords (primitives):
-color #59C "\<(bool|byte|char|decimal|double|float|int|long|sbyte|short|uint|ulong|ushort)\>"
+color #17D "\<(bool|byte|char|decimal|double|float|int|long|sbyte|short|uint|ulong|ushort)\>"
 
 # Keywords (aliases):
-color #59C "\<(object|string)\>"
+color #17D "\<(object|string)\>"
 
 # Keywords (class access):
-color #59C "\<(base|this)\>"
+color #17D "\<(base|this)\>"
 
 # Keywords (literals):
-color #59C "\<(true|false|null)\>"
+color #17D "\<(true|false|null)\>"
 
 # Keywords (runtime):
-color #C8B "\<(checked|fixed|lock|unchecked|unsafe)\>"
+#color #C8B "\<(checked|fixed|lock|unchecked|unsafe)\>"
 
 # Contextual keywords:
-color #59C "\<(add|alias|and|args|ascending|async|await|by|descending|dynamic|equals|file|from|get|global|group)\>"
-color #59C "\<(init|into|join|let|managed|nameof|nint|not|notnull|nuint|on|or|orderby|partial|record|remove|required)\>"
-color #59C "\<(scoped|select|set|unmanaged|value|var|when|where|with|yield)\>"
+color #17D "\<(add|alias|and|args|ascending|async|await|by|descending|dynamic|equals|file|from|get|global|group)\>"
+color #17D "\<(init|into|join|let|managed|nameof|nint|not|notnull|nuint|on|or|orderby|partial|record|remove|required)\>"
+color #17D "\<(scoped|select|set|unmanaged|value|var|when|where|with|yield)\>"
 
 # Keyword as variable indicator (define after keywords and before string indicators):
 color normal "[@][a-z]+"
-color #59C "[@]"
+color #17D "[@]"
 
 # Preprocessor directives:
-color #48C "#(define|elif|else|endif|endregion|error|if|line|nullable|pragma|region|undef|warning)"
+#color #48C "#(define|elif|else|endif|endregion|error|if|line|nullable|pragma|region|undef|warning)"
 
 # Operators (general):
-color #789 "[-,;:!?.*%+=]"
+color #222 "[-,;:!?.*%+=]"
 
 # Operators (bitwise and shift):
-color #789 "[&^|~<\>]"
+color #222 "[&^|~<\>]"
 
 # Lambdas (define after operators):
-color mauve "=>"
+#color mauve "=>"
 
 # Optional syntax highlighting for methods (define before delimiters):
-color #4BA "\w+[\(]"
+color #222 "\w+[\(]"
 
 # Optional syntax highlighting for attributes (define before delimiters):
-color #4BA "\[(.*?)\]"
+color #222 "\[(.*?)\]"
 
 # Delimiters ((), [], and {}):
-color #FD0 "[\(\)]+|[][]+|[\{\}]"
+color #111 "[\(\)]+|[][]+|[\{\}]"
 
 # Numerics:
-color #ACA "\b[0-9]+"
-color #ACA "[0-9]*\.[0-9]+(e[0-9]+)*"
-color #ACA "\b0b[01]+"
-color #ACA "\b0x[0-9a-fA-F]+"
+color #35E "\b[0-9]+"
+color #35E "[0-9]*\.[0-9]+(e[0-9]+)*"
+color #35E "\b0b[01]+"
+color #35E "\b0x[0-9a-fA-F]+"
 
 # Characters and escapes.
-color #B87 "'.?'"
-color #B87 "'\\['\"\\0abfnrtv]'"
+color #793 "'.?'"
+color #793 "'\\['\"\\0abfnrtv]'"
 
 # Unicode:
-color #B87 "'\\[ux][0-9a-fA-F]{4}'"
+color #793 "'\\[ux][0-9a-fA-F]{4}'"
 
 # UTF-8 strings (define before string literals):
-color #59C "\"u8"
+#color #17D "\"u8"
 
 # String literal (define before comments):
-color #B87 ""([^"]|\\")*""
+color #793 ""([^"]|\\")*""
 
 # Comments (single line):
-color #684 "//.*"
+color #888 "//.*"
 
 # Comments (multiline):
-color #684 start="/\*" end="\*/"
+color #888 start="/\*" end="\*/"
 
 # Comments (documentation):
-color #684 "///.*"
+color #888 "///.*"
 
 # Comments (documentation attributes):
-color #59C "\<(cref|name)="
+color #17D "\<(cref|name)="
 
 # String literal (verbatim - end on semicolon to allow multiline):
-color #B87 start="@"" end=";"
+color #793 start="@"" end=";"
 
 # String literal (interpolated - end on semicolon to allow multiline):
-color #B87 start="\$"" end=";"
+color #793 start="\$"" end=";"
 
 # String literal (raw):
-color #B87 start=""""" end="""""
+color #793 start=""""" end="""""
 
 # Multiline string literal semicolon fix (define after string literals):
-color #789 ";"
+color #222 ";"
 
 # Reminders (define after comments):
 color lightwhite,crimson "\<(FIXME)\>"
