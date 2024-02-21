@@ -1,98 +1,104 @@
-# Nano syntax highlighting for C#.
+# Nano syntax highlighting for C#. WIP: currently a copy of dark.
 
 syntax "C#" "\.cs$"
 
 # Keywords (general):
-color sea "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|interface|internal|is)\>"
-color sea "\<(namespace|new|operator|out|override|params|private|protected|public|readonly|ref)\>"
-color sea "\<(sealed|sizeof|stackalloc|static|struct|throw|typeof|using|virtual|void|volatile)\>"
+color #59C "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|interface|internal|is)\>"
+color #59C "\<(namespace|new|operator|out|override|params|private|protected|public|readonly|ref)\>"
+color #59C "\<(sealed|sizeof|stackalloc|static|struct|throw|typeof|using|virtual|void|volatile)\>"
 
 # Keywords (control):
-color lightmagenta "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|try|while)\>"
+color #C8B "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|try|while)\>"
 
 # Keywords (primitives):
-color sea "\<(bool|byte|char|decimal|double|float|int|long|sbyte|short|uint|ulong|ushort)\>"
+color #59C "\<(bool|byte|char|decimal|double|float|int|long|sbyte|short|uint|ulong|ushort)\>"
 
 # Keywords (aliases):
-color lagoon "\<(object|string)\>"
+color #59C "\<(object|string)\>"
 
 # Keywords (class access):
-color sea "\<(base|this)\>"
+color #59C "\<(base|this)\>"
 
 # Keywords (literals):
-color sky "\<(true|false|null)\>"
+color #59C "\<(true|false|null)\>"
 
 # Keywords (runtime):
-color crimson "\<(checked|fixed|lock|unchecked|unsafe)\>"
+color #C8B "\<(checked|fixed|lock|unchecked|unsafe)\>"
 
 # Contextual keywords:
-color rosy "\<(add|alias|and|args|ascending|async|await|by|descending|dynamic|equals|file|from|get|global|group)\>"
-color rosy "\<(init|into|join|let|managed|nameof|nint|not|notnull|nuint|on|or|orderby|partial|record|remove|required)\>"
-color rosy "\<(scoped|select|set|unmanaged|value|var|when|where|with|yield)\>"
+color #59C "\<(add|alias|and|args|ascending|async|await|by|descending|dynamic|equals|file|from|get|global|group)\>"
+color #59C "\<(init|into|join|let|managed|nameof|nint|not|notnull|nuint|on|or|orderby|partial|record|remove|required)\>"
+color #59C "\<(scoped|select|set|unmanaged|value|var|when|where|with|yield)\>"
 
 # Keyword as variable indicator (define after keywords and before string indicators):
 color normal "[@][a-z]+"
-color sea "[@]"
+color #59C "[@]"
 
 # Preprocessor directives:
-color brightblue "#(define|elif|else|endif|endregion|error|if|line|nullable|pragma|region|undef|warning)"
+color #48C "#(define|elif|else|endif|endregion|error|if|line|nullable|pragma|region|undef|warning)"
 
 # Operators (general):
-color lightblue "[-,;:!?.*%+=]"
+color #789 "[-,;:!?.*%+=]"
 
 # Operators (bitwise and shift):
-color lightblue "[&^|~<\>]"
+color #789 "[&^|~<\>]"
 
 # Lambdas (define after operators):
-color rosy "=>"
+color mauve "=>"
 
 # Optional syntax highlighting for methods (define before delimiters):
-color sand "\w+[\(]"
+color #4BA "\w+[\(]"
 
 # Optional syntax highlighting for attributes (define before delimiters):
-color sand "\[(.*?)\]"
+color #4BA "\[(.*?)\]"
 
 # Delimiters ((), [], and {}):
-color brightblue "[\(\)]+|[][]+|[\{\}]"
+color #FD0 "[\(\)]+|[][]+|[\{\}]"
 
 # Numerics:
-color ocher "\b[0-9]+"
-color ocher "[0-9]*\.[0-9]+(e[0-9]+)*"
-color ocher "\b0b[01]+"
-color ocher "\b0x[0-9a-fA-F]+"
+color #ACA "\b[0-9]+"
+color #ACA "[0-9]*\.[0-9]+(e[0-9]+)*"
+color #ACA "\b0b[01]+"
+color #ACA "\b0x[0-9a-fA-F]+"
 
 # Characters and escapes.
-color latte "'.?'"
-color latte "'\\['\"\\0abfnrtv]'"
+color #B87 "'.?'"
+color #B87 "'\\['\"\\0abfnrtv]'"
 
 # Unicode:
-color brick "'\\[ux][0-9a-fA-F]{4}'"
+color #B87 "'\\[ux][0-9a-fA-F]{4}'"
 
 # UTF-8 strings (define before string literals):
-color sea "\"u8"
+color #59C "\"u8"
 
-# Verbatim and interpolated string indicators:
-color beet "[@$]\""
+# String literal (define before comments):
+color #B87 ""([^"]|\\")*""
 
-# Comments (ignore comments inside quotes):
-color teal "//[^"'`]+$"
-color teal start="/\*" end="\*/"
+# Comments:
+color #684 start="//" end="$"
+color #684 start="/\*" end="\*/"
 
 # Comments (documentation):
-color teal "///.*"
+color #684 "///.*"
 
 # Comments (documentation attributes):
-color brown "\<(cref|name)="
+color #59C "\<(cref|name)="
 
-# String literal (define after comments to use within documentation):
-color latte start=""" end="""
+# String literal (verbatim - end on semicolon to allow multiline):
+color #B87 start="@"" end=";"
+
+# String literal (interpolated - end on semicolon to allow multiline):
+color #B87 start="\$"" end=";"
 
 # String literal (raw):
-color latte start=""""" end="""""
+color #B87 start=""""" end="""""
+
+# Multiline string literal semicolon fix (define after string literals):
+color #789 ";"
 
 # Reminders (define after comments):
-color crimson "\<(FIXME)\>"
-color sky "\<(TODO)\>"
+color lightwhite,crimson "\<(FIXME)\>"
+color lightwhite,sea "\<(TODO)\>"
 
 # Trailing whitespace (define last):
 color ,blue "[[:space:]]+$"
