@@ -59,8 +59,10 @@ color #B87 ""([^"]|\\")*""
 # String literal (text block):
 color #B87 start=""""" end="""""
 
-# Comments:
-color #684 start="//" end="$"
+# Comments (single line):
+color #684 "//.*"
+
+# Comments (multiline):
 color #684 start="/\*" end="\*/"
 
 # Optional syntax highlighting for annotations (define after comments to use within documentation):

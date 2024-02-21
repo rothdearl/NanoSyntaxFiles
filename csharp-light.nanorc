@@ -74,8 +74,10 @@ color #59C "\"u8"
 # String literal (define before comments):
 color #B87 ""([^"]|\\")*""
 
-# Comments:
-color #684 start="//" end="$"
+# Comments (single line):
+color #684 "//.*"
+
+# Comments (multiline):
 color #684 start="/\*" end="\*/"
 
 # Comments (documentation):

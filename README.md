@@ -98,5 +98,6 @@ set autoindent
 
 ### Undocumented Features
 
+- `//` inside a string literal will highlight the rest of the line as a comment.
 - `"""` inside comments will highlight everything outside the comments as a text block unless there is a
   terminating `"""` in the comments.
