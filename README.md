@@ -75,6 +75,6 @@ set autoindent
 
 ### Screenshots
 
-### C# Dark
+#### C# Dark
 
 ![csharp-dark-3.png](./screenshots/csharp-dark-3.png)
