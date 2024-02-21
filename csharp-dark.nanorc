@@ -2,19 +2,13 @@
 
 syntax "C#" "\.cs$"
 
-# Optional syntax highlighting for methods (define before keywords and delimiters):
-color #4BA "\w+[\(]"
-
-# Optional syntax highlighting for attributes (define before delimiters):
-color #4BA "\[(.*?)\]"
-
 # Keywords (general):
 color #59C "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|interface|internal|is)\>"
 color #59C "\<(namespace|new|operator|out|override|params|private|protected|public|readonly|ref)\>"
 color #59C "\<(sealed|sizeof|stackalloc|static|struct|throw|typeof|using|virtual|void|volatile)\>"
 
 # Keywords (control):
-color #C8B "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|throw|try|while)\>"
+color #C8B "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|try|while)\>"
 
 # Keywords (primitives):
 color #59C "\<(bool|byte|char|decimal|double|float|int|long|sbyte|short|uint|ulong|ushort)\>"
@@ -50,7 +44,13 @@ color #789 "[-,;:!?.*%+=]"
 color #789 "[&^|~<\>]"
 
 # Lambdas (define after operators):
-color #789 "=>"
+color mauve "=>"
+
+# Optional syntax highlighting for methods (define before delimiters):
+color #4BA "\w+[\(]"
+
+# Optional syntax highlighting for attributes (define before delimiters):
+color #4BA "\[(.*?)\]"
 
 # Delimiters ((), [], and {}):
 color #FD0 "[\(\)]+|[][]+|[\{\}]"
@@ -75,7 +75,7 @@ color #59C "\"u8"
 color #B87 "[@$]\""
 
 # Comments (ignore comments inside quotes):
-color #684 "//[^"'`]+$"
+color #684 start="//" end="$"
 color #684 start="/\*" end="\*/"
 
 # Comments (documentation):

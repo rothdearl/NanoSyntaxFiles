@@ -1,6 +1,15 @@
 # Syntax Files for the nano Text Editor
 
-## Summary
+## Table of Contents
+
+1. [Overview](#Overview)
+2. [Regex Evaluation](#Regex-Evaluation)
+3. [Available Colors](#Available-Colors)
+4. [Including in nano](#Including-in-nano)
+5. [Screenshots](#Screenshots)
+6. [Undocumented Features](#Undocumented-Features)
+
+### Overview
 
 This repository contains syntax configuration files for the nano text editor. They can be downloaded as files or the
 contents can be copy/pasted into an existing configuration file. The following document provides information on how a
@@ -75,6 +84,15 @@ set autoindent
 
 ### Screenshots
 
-#### C# Dark
+**C# (Dark)**
+![csharp-dark-1.png](./screenshots/csharp-dark-1.png)
+![csharp-dark-2.png](./screenshots/csharp-dark-2.png)
 
-![csharp-dark-3.png](./screenshots/csharp-dark-3.png)
+**Java (Dark)**
+![java-dark-1.png](./screenshots/java-dark-1.png)
+![java-dark-2.png](./screenshots/java-dark-2.png)
+
+### Undocumented Features
+
+- `"""` inside comments will highlight everything outside the comments as a text block unless there is a
+  terminating `"""` in the comments.
