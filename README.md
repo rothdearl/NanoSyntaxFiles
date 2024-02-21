@@ -86,10 +86,14 @@ set autoindent
 
 **C# (Dark)**
 ![csharp-dark-1.png](./screenshots/csharp-dark-1.png)
+
+**C# (Dark)**
 ![csharp-dark-2.png](./screenshots/csharp-dark-2.png)
 
 **Java (Dark)**
 ![java-dark-1.png](./screenshots/java-dark-1.png)
+
+**Java (Dark)**
 ![java-dark-2.png](./screenshots/java-dark-2.png)
 
 ### Undocumented Features
