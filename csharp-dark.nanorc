@@ -71,6 +71,9 @@ color #B87 "'\\[ux][0-9a-fA-F]{4}'"
 # UTF-8 strings (define before string literals):
 color #59C "\"u8"
 
+# String literal (define before comments):
+color #B87 ""([^"]|\\")*""
+
 # Comments:
 color #684 start="//" end="$"
 color #684 start="/\*" end="\*/"
@@ -81,9 +84,6 @@ color #684 "///.*"
 # Comments (documentation attributes):
 color #59C "\<(cref|name)="
 
-# String literal (define after comments to use within documentation):
-color #B87 ""[^"]*""
-
 # String literal (verbatim - end on semicolon to allow multiline):
 color #B87 start="@"" end=";"
 
@@ -93,15 +93,12 @@ color #B87 start="\$"" end=";"
 # String literal (raw):
 color #B87 start=""""" end="""""
 
-# Escaped double quote in comments fix (define after string literals):
-color #B87 "\".*\""
-
 # Multiline string literal semicolon fix (define after string literals):
 color #789 ";"
 
 # Reminders (define after comments):
-color brightred "\<(FIXME)\>"
-color brightblue "\<(TODO)\>"
+color lightwhite,crimson "\<(FIXME)\>"
+color lightwhite,sea "\<(TODO)\>"
 
 # Trailing whitespace (define last):
 color ,blue "[[:space:]]+$"

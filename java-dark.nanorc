@@ -54,10 +54,7 @@ color #B87 "'\\['\"\\0abfnrtv]'"
 color #B87 "'\\u[0-9a-fA-F]{4}'"
 
 # String literal (define before comments):
-color #B87 ""[^"]*""
-
-# Escaped double quote in comments fix (define after string literals):
-color #B87 "\".*\""
+color #B87 ""([^"]|\\")*""
 
 # String literal (text block):
 color #B87 start=""""" end="""""
@@ -70,8 +67,8 @@ color #684 start="/\*" end="\*/"
 color #4BA "@\w+"
 
 # Reminders (define after comments):
-color brightred "\<(FIXME)\>"
-color brightblue "\<(TODO)\>"
+color lightwhite,crimson "\<(FIXME)\>"
+color lightwhite,sea "\<(TODO)\>"
 
 # Trailing whitespace (define last):
 color ,blue "[[:space:]]+$"
