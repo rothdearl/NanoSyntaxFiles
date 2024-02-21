@@ -68,6 +68,9 @@ color #B87 "'\\['\"\\0abfnrtv]'"
 # Unicode:
 color #B87 "'\\[ux][0-9a-fA-F]{4}'"
 
+# UTF-8 strings (define before string literals):
+color #59C "\"u8"
+
 # Verbatim and interpolated string indicators:
 color #B87 "[@$]\""
 
