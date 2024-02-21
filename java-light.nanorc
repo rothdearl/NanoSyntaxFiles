@@ -3,74 +3,74 @@
 syntax "Java" "\.java$"
 
 # Keywords (general):
-color #17D "\<(abstract|assert|class|const|enum|extends|final|implements|import|instanceof|interface)\>"
-color #17D "\<(native|new|non-sealed|package|permits|private|protected|public|record)\>"
-color #17D "\<(sealed|static|strictfp|synchronized|throw|throws|transient|void|volatile)\>"
+color #00F "\<(abstract|assert|class|const|enum|extends|final|implements|import|instanceof|interface)\>"
+color #00F "\<(native|new|non-sealed|package|permits|private|protected|public|record)\>"
+color #00F "\<(sealed|static|strictfp|synchronized|throw|throws|transient|void|volatile)\>"
 
 # Keywords (control):
-#color #C8B "\<(break|case|catch|continue|default|do|else|finally|for|goto|if|return|switch|try|while)\>"
+color #A0D "\<(break|case|catch|continue|default|do|else|finally|for|goto|if|return|switch|try|while)\>"
 
 # Keywords (primitives):
-color #17D "\<(boolean|byte|char|double|float|int|long|short)\>"
+color #48A "\<(boolean|byte|char|double|float|int|long|short)\>"
 
 # Keywords (class access):
-color #17D "\<(super|this)\>"
+color #32F "\<(super|this)\>"
 
 # Keywords (literals):
-color #17D "\<(true|false|null)\>"
+color #00F "\<(true|false|null)\>"
 
 # Contextual keywords:
-color #17D "\<(exports|module|open|opens|provides|requires|to|transitive|uses|var|with|yield)\>"
+color #00F "\<(exports|module|open|opens|provides|requires|to|transitive|uses|var|with|yield)\>"
 
 # Operators (general):
-color #222 "[-,;:!?.*%+=]"
+color normal "[-,;:!?.*%+=]"
 
 # Operators (bitwise and shift):
-color #222 "[&^|~<\>]"
+color normal "[&^|~<\>]"
 
 # Variable-length arguments (define after operators):
-#color mauve "\.\.\."
+color normal "\.\.\."
 
 # Lambdas (define after operators):
-#color mauve "->"
+color normal "->"
 
 # Optional syntax highlighting for methods (define before delimiters):
-color #CA2 "\w+[\(]"
+color #762 "\w+[\(]"
 
 # Delimiters ((), [], and {}):
-color #111 "[\(\)]+|[][]+|[\{\}]"
+color #842 "[\(\)]+|[][]+|[\{\}]"
 
 # Numerics:
-color #35E "\b[0-9]+"
-color #35E "[0-9]*\.[0-9]+(e[0-9]+)*"
-color #35E "\b0b[01]+"
-color #35E "\b0x[0-9a-fA-F]+"
+color #185 "\b[0-9]+"
+color #185 "[0-9]*\.[0-9]+(e[0-9]+)*"
+color #185 "\b0b[01]+"
+color #185 "\b0x[0-9a-fA-F]+"
 
 # Characters and escapes.
-color #793 "'.?'"
-color #793 "'\\['\"\\0abfnrtv]'"
+color #A22 "'.?'"
+color #A22 "'\\['\"\\0abfnrtv]'"
 
 # Unicode:
-color #793 "'\\u[0-9a-fA-F]{4}'"
+color #A22 "'\\u[0-9a-fA-F]{4}'"
 
 # String literal (define before comments):
-color #793 ""([^"]|\\")*""
+color #A22 ""([^"]|\\")*""
 
 # String literal (text block):
-color #793 start=""""" end="""""
+color #A22 start=""""" end="""""
 
 # Comments (single line):
-color #888 "//.*"
+color #080 "//.*"
 
 # Comments (multiline):
-color #888 start="/\*" end="\*/"
+color #080 start="/\*" end="\*/"
 
 # Optional syntax highlighting for annotations (define after comments to use within documentation):
-color #CA2 "@\w+"
+color #289 "@\w+"
 
 # Reminders (define after comments):
-color lightwhite,crimson "\<(FIXME)\>"
-color lightwhite,sea "\<(TODO)\>"
+color normal,normal "\<(FIXME)\>"
+color normal,normal "\<(TODO)\>"
 
 # Trailing whitespace (define last):
-color ,blue "[[:space:]]+$"
+color ,normal "[[:space:]]+$"
