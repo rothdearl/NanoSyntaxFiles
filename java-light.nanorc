@@ -2,6 +2,9 @@
 
 syntax "Java" "\.java$"
 
+# Optional syntax highlighting for methods (define before keywords):
+color #279 "\w+[\(]"
+
 # Keywords (general):
 color #00F "\<(abstract|assert|class|const|enum|extends|final|implements|import|instanceof|interface)\>"
 color #00F "\<(native|new|non-sealed|package|permits|private|protected|public|record)\>"
@@ -23,19 +26,16 @@ color #00F "\<(true|false|null)\>"
 color #00F "\<(exports|module|open|opens|provides|requires|to|transitive|uses|var|with|yield)\>"
 
 # Operators (general):
-color normal "[-,;:!?.*%+=]"
+color #00F "[-,;:!?.*%+=]"
 
 # Operators (bitwise and shift):
-color normal "[&^|~<\>]"
+color #842 "[&^|~<\>]"
 
 # Variable-length arguments (define after operators):
-color normal "\.\.\."
+color #B2D "\.\.\."
 
 # Lambdas (define after operators):
-color normal "->"
-
-# Optional syntax highlighting for methods (define before delimiters):
-color #762 "\w+[\(]"
+color #B2D "->"
 
 # Delimiters ((), [], and {}):
 color #842 "[\(\)]+|[][]+|[\{\}]"
@@ -69,8 +69,8 @@ color #080 start="/\*" end="\*/"
 color #289 "@\w+"
 
 # Reminders (define after comments):
-color normal,normal "\<(FIXME)\>"
-color normal,normal "\<(TODO)\>"
+color brightred,normal "\<(FIXME)\>"
+color brightblue,normal "\<(TODO)\>"
 
 # Trailing whitespace (define last):
-color ,normal "[[:space:]]+$"
+color ,#080 "[[:space:]]+$"

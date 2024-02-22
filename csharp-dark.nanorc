@@ -2,6 +2,9 @@
 
 syntax "C#" "\.cs$"
 
+# Optional syntax highlighting for methods (define before keywords):
+color #4BA "\w+[\(]"
+
 # Keywords (general):
 color #59C "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|interface|internal|is)\>"
 color #59C "\<(namespace|new|operator|out|override|params|private|protected|public|readonly|ref)\>"
@@ -45,9 +48,6 @@ color #789 "[&^|~<\>]"
 
 # Lambdas (define after operators):
 color mauve "=>"
-
-# Optional syntax highlighting for methods (define before delimiters):
-color #4BA "\w+[\(]"
 
 # Optional syntax highlighting for attributes (define before delimiters):
 color #4BA "\[(.*?)\]"
