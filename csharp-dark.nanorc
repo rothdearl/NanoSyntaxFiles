@@ -6,9 +6,14 @@ syntax "C#" "\.cs$"
 color #4BA "\w+[\(]"
 
 # Keywords (general):
-color #59C "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|interface|internal|is)\>"
-color #59C "\<(namespace|new|operator|out|override|params|private|protected|public|readonly|ref)\>"
-color #59C "\<(sealed|sizeof|stackalloc|static|struct|throw|typeof|using|virtual|void|volatile)\>"
+color #59C "\<(abstract|as|class|const|delegate|enum|event|explicit|extern|implicit|internal|is|namespace|new)\>"
+color #59C "\<(operator|out|override|params|readonly|ref|sizeof|stackalloc|static|struct|throw|typeof|using|virtual|void|volatile)\>"
+
+# Keywords (classes):
+color #59C "\<(interface|sealed)\>"
+
+# Keywords (access modifiers):
+color #59C "\<(private|protected|public)\>"
 
 # Keywords (control):
 color #C8B "\<(break|case|catch|continue|default|do|else|finally|goto|for|foreach|if|in|return|switch|try|while)\>"
