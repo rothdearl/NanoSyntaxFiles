@@ -3,7 +3,7 @@
 syntax "Java" "\.java$"
 
 # Optional syntax highlighting for methods (define before keywords):
-color #279 "\w+[\(]"
+color normal "\w+[\(]"
 
 # Keywords (general):
 color normal "\<(abstract|assert|class|const|enum|final|import|instanceof|native|new|package|permits)\>"
