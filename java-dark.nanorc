@@ -3,14 +3,14 @@
 syntax "Java" "\.java$"
 
 # Optional syntax highlighting for methods (define before keywords):
-color #279 "\w+[\(]"
+color normal "\w+[\(]"
 
 # Keywords (general):
-color normal "\<(abstract|assert|class|const|enum|final|import|instanceof|native|new|package|permits)\>"
-color normal "\<(record|static|strictfp|synchronized|throw|throws|transient|void|volatile)\>"
+color normal "\<(abstract|assert|class|const|enum|final|import|instanceof|native|new|package)\>"
+color normal "\<(static|strictfp|synchronized|throw|throws|transient|void|volatile)\>"
 
 # Keywords (classes):
-color normal "\<(extends|implements|interface|non-sealed|sealed)\>"
+color normal "\<(extends|implements|interface)\>"
 
 # Keywords (access modifiers):
 color normal "\<(private|protected|public)\>"
@@ -28,7 +28,7 @@ color normal "\<(super|this)\>"
 color normal "\<(true|false|null)\>"
 
 # Contextual keywords:
-color normal "\<(exports|module|open|opens|provides|requires|to|transitive|uses|var|with|yield)\>"
+color normal "\<(exports|module|non-sealed|open|opens|permits|provides|record|requires|sealed|to|transitive|uses|var|with|yield)\>"
 
 # Operators (general):
 color normal "[-,;:!?.*%+=]"
